@@ -4,6 +4,7 @@
 // @version      1.1
 // @description  Automatically clicks "Collapse Description" and "Me" buttons on Event Details page
 // @author       palharesf
+// @license      MIT
 // @match        https://pagywosg.xyz/events*
 // @grant        none
 //
