@@ -9,5 +9,10 @@ A collection of useful userscripts for various websites.
 - **Install**: [Greasy Fork](https://greasyfork.org/en/scripts/550163-auto-click-event-details-buttons)
 - **Description**: Automatically clicks "Collapse Description" and "Me" buttons on PAGYWOSG event pages
 
+### Rosiminc Nono Cafe Timer
+- **File**: [rosiminc_nono_cafe_timer.user.js](rosiminc_nono_cafe_timer.user.js)
+- **Install**: [Greasy Fork](https://greasyfork.org/en/scripts/557948-rosiminc-nonogram-cafe-timer)
+- **Description**: Displays a timer for Rosiminc Nono Cafe
+
 ### Future Scripts
 More userscripts will be added here...
