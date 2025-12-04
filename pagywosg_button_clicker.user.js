@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Auto-Click Event Details Buttons
-// @namespace    https://pagywosg.xyz/
+// @namespace    https://github.com/palharesf/
 // @version      1.1
 // @description  Automatically clicks "Collapse Description" and "Me" buttons on Event Details page. Source code and development: https://github.com/palharesf/user_scripts
 // @author       palharesf
