@@ -33,5 +33,11 @@ A collection of useful userscripts for various websites.
 - **Install**: [Greasy Fork](https://greasyfork.org/en/scripts/568617-helper-for-sg-wordle)
 - **Description**: Adds a floating Solver panel to the [SG-Wordle](https://sg-wordle.netlify.app/) page that suggests the best remaining words based on your guesses. It reads the board state via React fiber inspection (with a DOM color fallback), applies Wordle constraints (green/yellow/gray), and ranks candidates by letter frequency.
 
+### SteamGifts Link to Ercalote
+- **File**: [sg_link_to_ercalote.js](sg_link_to_ercalote.js)
+- **Source Code**: [GitHub](https://github.com/palharesf/user_scripts)
+- **Install**: [Greasy Fork](https://greasyfork.org/en/scripts/569050-steamgifts-link-to-ercalote)
+- **Description**: Adds "Won By" and "Gifted To" buttons to user pages on SteamGifts, linking directly to [Ercalote](https://ercalote.azurewebsites.net/) filtered by that user's won/sent giveaways
+
 ### Future Scripts
 More userscripts will be added here...
