@@ -39,5 +39,11 @@ A collection of useful userscripts for various websites.
 - **Install**: [Greasy Fork](https://greasyfork.org/en/scripts/569050-steamgifts-link-to-ercalote)
 - **Description**: Adds "Won By" and "Gifted To" buttons to user pages on SteamGifts, linking directly to [Ercalote](https://ercalote.azurewebsites.net/) filtered by that user's won/sent giveaways
 
+### SG Tents Solver
+- **File**: [sg_tents_solver.js](sg_tents_solver.js)
+- **Source Code**: [GitHub](https://github.com/palharesf/user_scripts)
+- **Install**: [Greasy Fork](https://greasyfork.org/en/scripts/576765-sg-tents-solver)
+- **Description**: Adds a floating "⚡ Solve Tents" button to the [ThermoGift Tents](https://lexaire.github.io/ThermoGift/) puzzle page. Reads the board state (trees, tents, grass) and row/column clues from the DOM, then applies a backtracking pairing algorithm to find the unique valid tent placement. Solved cells are highlighted with a green outline and tent emoji overlay. Clue detection is automatic (tries aria-labels first, then falls back to DOM geometry); if auto-detection fails, clues can be supplied manually via `window.autoSolve.setClues(rows, cols)` in the console.
+
 ### Future Scripts
 More userscripts will be added here...
