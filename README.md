@@ -45,5 +45,11 @@ A collection of useful userscripts for various websites.
 - **Install**: [Greasy Fork](https://greasyfork.org/en/scripts/576765-sg-tents-solver)
 - **Description**: Adds a floating "⚡ Solve Tents" button to the [ThermoGift Tents](https://lexaire.github.io/ThermoGift/) puzzle page. Reads the board state (trees, tents, grass) and row/column clues from the DOM, then applies a backtracking pairing algorithm to find the unique valid tent placement. Solved cells are highlighted with a green outline and tent emoji overlay. Clue detection is automatic (tries aria-labels first, then falls back to DOM geometry); if auto-detection fails, clues can be supplied manually via `window.autoSolve.setClues(rows, cols)` in the console.
 
+### Parquet Puzzle Solver
+- **File**: [parquet_puzzle_solver.js](parquet_puzzle_solver.js)
+- **Source Code**: [GitHub](https://github.com/palharesf/user_scripts)
+- **Install**: [Greasy Fork](https://greasyfork.org/en/scripts/579471-parquet-puzzle-solver-forced-refresh)
+- **Description**: Adds a "Solve" button to the [Parquet Puzzle](https://parquetpuzzle.com/) game page. When clicked, the correct path is highlighted.
+
 ### Future Scripts
 More userscripts will be added here...
