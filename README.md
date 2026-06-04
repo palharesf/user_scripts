@@ -51,5 +51,11 @@ A collection of useful userscripts for various websites.
 - **Install**: [Greasy Fork](https://greasyfork.org/en/scripts/579471-parquet-puzzle-solver-forced-refresh)
 - **Description**: Adds a "Solve" button to the [Parquet Puzzle](https://parquetpuzzle.com/) game page. When clicked, the correct path is highlighted.
 
+### Steam to Steamgifts Button
+- **File**: [steam_steamgifts_button.js](steam_steamgifts_button.js)
+- **Source Code**: [GitHub](https://github.com/palharesf/user_scripts)
+- **Install**: [Greasy Fork](https://greasyfork.org/en/scripts/581169-steam-to-steamgifts-button)
+- **Description**: Adds a button that links a game's Steam page to its SteamGifts page
+
 ### Future Scripts
 More userscripts will be added here...
