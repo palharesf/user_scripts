@@ -57,5 +57,11 @@ A collection of useful userscripts for various websites.
 - **Install**: [Greasy Fork](https://greasyfork.org/en/scripts/581169-steam-to-steamgifts-button)
 - **Description**: Adds a button that links a game's Steam page to its SteamGifts page
 
+### Steam Search - Mass Ignore Games
+- **File**: [steam_mass_ignore.js](steam_mass_ignore.js)
+- **Source Code**: [GitHub](https://github.com/palharesf/user_scripts)
+- **Install**: [Greasy Fork](https://greasyfork.org/en/scripts/581583-steam-search-mass-ignore-games/post-install)
+- **Description**: Uses smart visibility checks to prevent the button from being injected into hidden Steam layout containers
+
 ### Future Scripts
 More userscripts will be added here...
