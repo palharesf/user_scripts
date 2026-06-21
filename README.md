@@ -10,11 +10,11 @@ A collection of useful userscripts for various websites.
 - **Install**: [Greasy Fork](https://greasyfork.org/en/scripts/550163-auto-click-event-details-buttons)
 - **Description**: Automatically clicks "Collapse Description" and "Me" buttons on PAGYWOSG event pages
 
-### Rosiminc Nono Cafe Timer
-- **File**: [rosiminc_nono_cafe_timer.user.js](rosiminc_nono_cafe_timer.user.js)
+### Rosiminc Nonogram QoL Tools
+- **File**: [rosiminc_nono_cafe_timer.js](rosiminc_nono_cafe_timer.js)
 - **Source Code**: [GitHub](https://github.com/palharesf/user_scripts)
 - **Install**: [Greasy Fork](https://greasyfork.org/en/scripts/557948-rosiminc-nonogram-cafe-timer)
-- **Description**: Displays a timer for Rosiminc Nono Cafe
+- **Description**: Adds a game timer and an optional Auto Hint-Shading toggle for RosimInc's Nonogram Cafe. The toggle state is saved in localStorage.
 
 ### Steam Header Review Button
 - **File**: [steam_header_review_button.js](steam_header_review_button.js)
