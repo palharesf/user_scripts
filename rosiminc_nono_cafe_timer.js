@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Rosiminc Nonogram QoL Tools
 // @namespace    https://github.com/palharesf/
-// @version      1.1
+// @version      1.1.2
 // @description  Add a timer and automatic hint-shading toggle to RosimInc's Nonogram Cafe
 // @author       palharesf
 // @license      MIT
@@ -49,6 +49,7 @@
         let startTime = null;
         let elapsedTime = 0;
         let timerStarted = false;
+        let gameFinished = false;
 
         const timerDiv = document.createElement('div');
         timerDiv.id = 'nonogram-timer';
@@ -96,7 +97,7 @@
         }
 
         function startTimer() {
-            if (timerStarted) return;
+            if (timerStarted || gameFinished) return;
 
             timerStarted = true;
             startTime = Date.now();
@@ -104,14 +105,36 @@
         }
 
         function stopTimer() {
-            if (!timerInterval) return;
+            if (timerInterval === null) return;
 
             clearInterval(timerInterval);
             timerInterval = null;
         }
 
         function isVisible(element) {
-            return window.getComputedStyle(element).display !== 'none';
+            const style = window.getComputedStyle(element);
+            return style.display !== 'none' && style.visibility !== 'hidden';
+        }
+
+        function hasCompletionMessage(msgDiv) {
+            return Boolean(msgDiv && isVisible(msgDiv) && msgDiv.textContent.trim());
+        }
+
+        function stopTimerIfComplete(msgDiv = document.getElementById('msgDiv')) {
+            if (!hasCompletionMessage(msgDiv)) return;
+
+            gameFinished = true;
+            stopTimer();
+        }
+
+        function findMsgDiv(node) {
+            if (!node) return null;
+
+            const element = node.nodeType === 1 ? node : node.parentElement;
+            if (!element) return null;
+
+            if (element.id === 'msgDiv') return element;
+            return element.closest?.('#msgDiv') || element.querySelector?.('#msgDiv') || null;
         }
 
         document.addEventListener('click', function(e) {
@@ -122,17 +145,14 @@
 
         const observer = new MutationObserver(function(mutations) {
             mutations.forEach(function(mutation) {
+                stopTimerIfComplete(findMsgDiv(mutation.target));
+
                 mutation.addedNodes.forEach(function(node) {
-                    if (node.id === 'msgDiv' || (node.nodeType === 1 && node.querySelector && node.querySelector('#msgDiv'))) {
-                        const msgDiv = node.id === 'msgDiv' ? node : node.querySelector('#msgDiv');
-                        if (msgDiv && isVisible(msgDiv)) {
-                            stopTimer();
-                        }
-                    }
+                    stopTimerIfComplete(findMsgDiv(node));
                 });
 
-                if (mutation.type === 'attributes' && mutation.target.id === 'msgDiv' && isVisible(mutation.target)) {
-                    stopTimer();
+                if (mutation.type === 'attributes' && mutation.target.id === 'msgDiv') {
+                    stopTimerIfComplete(mutation.target);
                 }
             });
         });
@@ -141,15 +161,11 @@
             childList: true,
             subtree: true,
             attributes: true,
+            characterData: true,
             attributeFilter: ['style', 'class']
         });
 
-        setTimeout(() => {
-            const msgDiv = document.getElementById('msgDiv');
-            if (msgDiv && isVisible(msgDiv)) {
-                stopTimer();
-            }
-        }, 500);
+        setTimeout(() => stopTimerIfComplete(), 500);
     }
 
     // ==========================================
